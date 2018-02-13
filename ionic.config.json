@@ -1,0 +1,8 @@
+{
+  "name": "vantage",
+  "app_id": "54a92aa9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
