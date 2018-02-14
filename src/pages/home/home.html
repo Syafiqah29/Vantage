@@ -1,14 +1,96 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Vantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea rows="1" cols="15" placeholder="I'm looking for.."></textarea>
     </ion-title>
+    <style type="text/css">
+    button#womenButton{
+      width: 140px;
+      height: 50px;
+      background-color: palevioletred;
+      letter-spacing: 2px;
+      font-size: 20px; 
+      font-family: Courier New, Courier, monospace;
+    }
+    button#menButton{
+      width: 130px;
+      height: 50px;
+      background-color: black;
+      letter-spacing: 2px;
+      color: palevioletred;
+      font-size: 20px;
+      font-family: Courier New, Courier, monospace;
+    }
+    button#sale{
+      width: 270px;
+      height: 80px;
+      background-color: pink;
+    }
+    button#arrival{
+      width: 270px;
+      height: 80px;
+      background-color: pink;
+    }
+    p#trending{
+      letter-spacing: 2px;
+      font-size: 16px;
+      font-family: Courier New, Courier, monospace;
+    }
+    div#box{
+      width: 270px;
+      height: 80px;
+    }
+    .box1{
+      width: 86px;
+      height: 80px;
+    }
+    p#exclusive{
+      letter-spacing: 2px;
+      font-size: 16px;
+      font-family: Courier New, Courier, monospace;
+    }
+    div#box2{
+      width: 270px;
+      height: 80px;
+    }
+    .box3{
+      width: 86px;
+      height: 80px;
+    }
+    </style>
   </ion-navbar>
 </ion-header>
+<ion-footer>
+  <ion-navbar>
+    <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px;"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-cart.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-wishlist.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-profile.png" class="nav" width="30px"></button>
+  </ion-navbar>
+</ion-footer>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <table id="section">
+      <button id="womenButton">WOMEN</button>
+      <button id="menButton">MEN</button>
+  </table>
+  <br>
+  <button id="sale"><img src="assets/imgs/sale-2.png" height="50px" width="150px"></button>
+  <br>
+  <br>
+  <button id="arrival"><img src="assignment/arrival.png"></button>
+  <br>
+  <p id="trending">Trending</p>
+  <div id="box">
+      <button class="box1"><img src="assignment/bags.jpg"></button>
+      <button class="box1"><img src="assignment/shoes.jpg"></button>
+      <button class="box1"><img src="assignemnt/watch.jpg"></button>
+  </div>
+  <p id="exclusive">Exclusive</p>
+  <div id="box2">
+    <button class="box3"><img src="assignment/exclusive_bag"></button>
+    <button class="box3"><img src="assignment/exclusive_shirt"></button>
+    <button class="box3"><img src="assignment/exclusive_shoes"></button>
+  </div>
 </ion-content>
