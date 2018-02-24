@@ -1,12 +1,21 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="custom"> 
     <ion-title>
-      Vantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <textarea rows="1" cols="15" placeholder="I'm looking for.."></textarea>
+      Vantage
     </ion-title>
     <style type="text/css">
+    ion-content{
+      background-color: #808080;
+    }
+    ion-title{
+      text-align: center;
+      font-family: Courier New, Courier, monospace;
+    }
+    div#section{
+      text-align: center;
+    }
     button#womenButton{
-      width: 140px;
+      width: 150px;
       height: 50px;
       background-color: palevioletred;
       letter-spacing: 2px;
@@ -14,7 +23,7 @@
       font-family: Courier New, Courier, monospace;
     }
     button#menButton{
-      width: 130px;
+      width: 150px;
       height: 50px;
       background-color: black;
       letter-spacing: 2px;
@@ -23,23 +32,19 @@
       font-family: Courier New, Courier, monospace;
     }
     button#sale{
-      width: 270px;
-      height: 80px;
-      background-color: pink;
+      width: 300px;
+      height: 100px;
+      background-color: black;
     }
     button#arrival{
-      width: 270px;
-      height: 80px;
+      width: 300px;
+      height: 100px;
       background-color: pink;
     }
     p#trending{
       letter-spacing: 2px;
       font-size: 16px;
       font-family: Courier New, Courier, monospace;
-    }
-    div#box{
-      width: 270px;
-      height: 80px;
     }
     .box1{
       width: 86px;
@@ -53,44 +58,87 @@
     div#box2{
       width: 270px;
       height: 80px;
+      text-align: left;
     }
     .box3{
       width: 86px;
       height: 80px;
     }
+    div#saleButton{
+      text-align: center;
+    }
+    div#arrivalButton{
+      text-align: center;
+    }
+    .image_trending{
+      height: 250px;
+      width: 300px;
+    }
+    .image_exclusive{
+      height: 250px;
+      width: 300px;
+    }
     </style>
   </ion-navbar>
 </ion-header>
 <ion-footer>
-  <ion-navbar>
-    <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px;"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button><img src="assets/imgs/nav-cart.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button><img src="assets/imgs/nav-wishlist.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ion-navbar color="custom">
+    <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px;"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/order.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-wishlist.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button><img src="assets/imgs/nav-profile.png" class="nav" width="30px"></button>
   </ion-navbar>
 </ion-footer>
 
-<ion-content padding>
-  <table id="section">
-      <button id="womenButton">WOMENS</button>
-      <button id="menButton">MEN</button>
-  </table>
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
   <br>
-  <button id="sale"><img src="assets/imgs/sale-2.png" height="50px" width="150px"></button>
-  <br>
-  <br>
-  <button id="arrival"><img src="assignment/arrival.png"></button>
-  <br>
-  <p id="trending">Trending</p>
-  <div id="box">
-      <button class="box1"><img src="assignment/bags.jpg"></button>
-      <button class="box1"><img src="assignment/shoes.jpg"></button>
-      <button class="box1"><img src="assignemnt/watch.jpg"></button>
+  <div id="section">
+    <button ion-button (click)="gotowomen-s-category()" id="womenButton">WOMEN</button>
+    <button id="menButton">MEN</button>
   </div>
-  <p id="exclusive">Exclusive</p>
-  <div id="box2">
-    <button class="box3"><img src="assignment/exclusive_bag"></button>
-    <button class="box3"><img src="assignment/exclusive_shirt"></button>
-    <button class="box3"><img src="assignment/exclusive_shoes"></button>
+
+  <br>
+
+  <div id="saleButton">
+      <button id="sale"><img src="assets/imgs/sale-2.png" height="50px" width="150px" ></button>
   </div>
+
+  <br>
+  
+  <div id="arrivalButton">
+      <button id="arrival"><img src="assets/imgs/arrival.png" height="100px;"></button>
+  </div>
+
+  <p id="trending">&nbsp;Trending</p>
+  <ion-slides  pager style="max-height: 250px;" autoplay="2000" loop="true" class="slide_trending">
+  <ion-slide>
+    <button><img src="assets/imgs/bag.png" class="image_trending"></button>
+  </ion-slide>
+
+  <ion-slide>
+   <button><img src="assets/imgs/shoe.png" class="image_trending"></button>
+  </ion-slide>
+
+  <ion-slide>
+    <button><img src="assets/imgs/watch.jpg" class="image_trending"></button>
+  </ion-slide>
+  </ion-slides>
+
+  <p id="exclusive">&nbsp;Exclusive</p>
+  <ion-slides pager style="max-height: 250px;" autoplay="2000" loop="true" class="slide_exclusive">
+  <ion-slide>
+    <button><img src="assets/imgs/exclusive_bag.jpg" class="image_exclusive"></button>
+  </ion-slide>
+
+  <ion-slide>
+    <button><img src="assets/imgs/exclusive_shirt.jpg" class="image_exclusive"></button>
+  </ion-slide>
+
+  <ion-slide>
+    <button><img src="assets/imgs/exclusive_shoes.jpg" class="image_exclusive"></button>
+  </ion-slide>
+  </ion-slides>
+  <br>
 </ion-content>
