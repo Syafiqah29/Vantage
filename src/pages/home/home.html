@@ -81,6 +81,7 @@
     </style>
   </ion-navbar>
 </ion-header>
+
 <ion-footer>
   <ion-navbar color="custom">
     <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px;"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -91,11 +92,10 @@
 </ion-footer>
 
 <ion-content>
-
-  <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
   <br>
   <div id="section">
-    <button ion-button (click)="gotowomen-s-category()" id="womenButton">WOMEN</button>
+    <button ion-button (click)=gotowomen() id="womenButton">WOMEN</button>
     <button id="menButton">MEN</button>
   </div>
 
