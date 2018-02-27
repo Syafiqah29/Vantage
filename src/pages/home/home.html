@@ -5,7 +5,7 @@
     </ion-title>
     <style type="text/css">
     ion-content{
-      background-color: #808080;
+      background-color: #ffb6c1;
     }
     ion-title{
       text-align: center;
@@ -17,10 +17,12 @@
     button#womenButton{
       width: 150px;
       height: 50px;
-      background-color: palevioletred;
+      background-color: black;
+      color: palevioletred;
       letter-spacing: 2px;
-      font-size: 20px; 
+      font-size: 22px; 
       font-family: Courier New, Courier, monospace;
+      font-weight: bold;
     }
     button#menButton{
       width: 150px;
@@ -28,8 +30,9 @@
       background-color: black;
       letter-spacing: 2px;
       color: palevioletred;
-      font-size: 20px;
+      font-size: 22px;
       font-family: Courier New, Courier, monospace;
+      font-weight: bold;
     }
     button#sale{
       width: 300px;
@@ -39,12 +42,13 @@
     button#arrival{
       width: 300px;
       height: 100px;
-      background-color: pink;
+      background-color: black;
     }
     p#trending{
       letter-spacing: 2px;
-      font-size: 16px;
+      font-size: 18px;
       font-family: Courier New, Courier, monospace;
+      font-weight: bolder;
     }
     .box1{
       width: 86px;
@@ -52,8 +56,9 @@
     }
     p#exclusive{
       letter-spacing: 2px;
-      font-size: 16px;
+      font-size: 18px;
       font-family: Courier New, Courier, monospace;
+      font-weight: bolder;
     }
     div#box2{
       width: 270px;
@@ -93,22 +98,22 @@
 
 <ion-content>
     <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
-  <br>
+
   <div id="section">
     <button ion-button (click)=gotowomen() id="womenButton">WOMEN</button>
-    <button id="menButton">MEN</button>
+    <button ion-button (click)=gotomen() id="menButton">MEN</button>
   </div>
 
   <br>
 
   <div id="saleButton">
-      <button id="sale"><img src="assets/imgs/sale-2.png" height="50px" width="150px" ></button>
+      <button id="sale"><img src="assets/imgs/sale-2.png" height="70px" width="190px" ></button>
   </div>
 
   <br>
   
   <div id="arrivalButton">
-      <button id="arrival"><img src="assets/imgs/arrival.png" height="100px;"></button>
+      <button id="arrival"><img src="assets/imgs/arrival.png" height="100px" width="250px"></button>
   </div>
 
   <p id="trending">&nbsp;Trending</p>

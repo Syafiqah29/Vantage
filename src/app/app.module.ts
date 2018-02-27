@@ -10,12 +10,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { WomenPage } from '../pages/women/women';
+import { MenPage } from '../pages/men/men';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    WomenPage
+    WomenPage,
+    MenPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { WomenPage } from '../pages/women/women';
   entryComponents: [
     MyApp,
     HomePage,
-    WomenPage
+    WomenPage,
+    MenPage
   ],
   providers: [
     StatusBar,

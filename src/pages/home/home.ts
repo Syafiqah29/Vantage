@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WomenPage } from '../women/women';
+import { MenPage } from '../men/men';
 
 @Component({
   selector: 'page-home',
@@ -16,5 +17,8 @@ export class HomePage {
     this.navCtrl.push(WomenPage);
   }
 
+  gotomen() {
+    this.navCtrl.push(MenPage);
+  }
 
 }
