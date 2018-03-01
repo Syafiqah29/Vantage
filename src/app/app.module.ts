@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule} from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,7 +14,17 @@ import { WomenPage } from '../pages/women/women';
 import { MenPage } from '../pages/men/men';
 import { CategoriesPage } from '../pages/categories/categories';
 import { DressPage } from '../pages/dress/dress';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
+var config = {
+  apiKey: "AIzaSyBs_7vackdKKp3sP8dcoqMG7YPIuwfuEzc",
+  authDomain: "vantage-2018.firebaseapp.com",
+  databaseURL: "https://vantage-2018.firebaseio.com",
+  projectId: "vantage-2018",
+  storageBucket: "vantage-2018.appspot.com",
+  messagingSenderId: "391351072737"
+};
 
 @NgModule({
   declarations: [
@@ -22,13 +33,18 @@ import { DressPage } from '../pages/dress/dress';
     WomenPage,
     MenPage,
     CategoriesPage,
-    DressPage
+    DressPage,
+    LoginPage,
+    SignupPage
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +53,9 @@ import { DressPage } from '../pages/dress/dress';
     WomenPage,
     MenPage,
     CategoriesPage,
-    DressPage
+    DressPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,

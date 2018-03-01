@@ -16,7 +16,9 @@
       text-align: center;
       font-family: Courier New, Courier, monospace;
     }
-
+    ion-content{
+      background-color: #ffb6c1;
+    }
    .nav{
       margin-left: 15px;
     }
@@ -51,7 +53,9 @@
         
         width: 330px;
         height: 53px;
-        background-color: rgb(235, 128, 163);
+        /* background-color: rgb(235, 128, 163); */
+        background-color: rgb(0, 0, 0);
+        color: palevioletred;
         letter-spacing: 0.5px;
         font-size: 24px; 
         margin-top: 6px;
@@ -85,11 +89,11 @@
 
         <button id="womenClothing">< &nbsp;  WOMEN'S CLOTHING</button><br>
         <div>
-        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/dress.png">&nbsp;Dresses</button><br>
-        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/tops.png" >&nbsp;Tops</button><br>
-        <button ion-button (click) = "nextPage();" class="dress"><img  class="icon" src="assets/imgs/skirts1.png">&nbsp;Skirts  </button><br>
-        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/pants.png">&nbsp;Pants & Leggings</button><br>
-        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/shorts1.png">&nbsp;Shorts</button><br>
-        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/jeans.png">&nbsp;Jeans</button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Dresses</button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Tops</button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Skirts  </button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Pants & Leggings</button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Shorts</button><br>
+        <button ion-button (click) = "nextPage();" class="dress">&nbsp;Jeans</button><br>
       </div>
 </ion-content>
