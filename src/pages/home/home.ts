@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WomenPage } from '../women/women';
 import { MenPage } from '../men/men';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'page-home',
@@ -9,9 +10,14 @@ import { MenPage } from '../men/men';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(private afAuth: AngularFireAuth, 
+    public navCtrl: NavController) {
 
   }
+
+  // ionViewDidLoad(){
+  //   console.log('ionViewDidLoad HomePage');
+  // }
 
   gotowomen(){
     this.navCtrl.push(WomenPage);
@@ -21,4 +27,7 @@ export class HomePage {
     this.navCtrl.push(MenPage);
   }
 
+  signOut(){
+    this.afAuth.auth.signOut();
+  }
 }
