@@ -1,0 +1,95 @@
+<!--
+  Generated template for the ACategoriesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom"> 
+    <ion-title>
+      Vantage
+    
+    </ion-title>
+    <style type="text/css">
+     ion-title{
+      text-align: center;
+      font-family: Courier New, Courier, monospace;
+    }
+
+   .nav{
+      margin-left: 15px;
+    }
+    .icon{
+      width: 40px;
+      height: 40px;
+      left: 500px;
+      top: 393px;
+      /* margin-right: 85px;  */
+    }
+    #navbar{
+      background-color: rgb(221, 219, 219);
+      
+    }
+      #search {
+        margin: auto;
+        width: 80%;
+      }
+      button#womenClothing {
+        width: 335px;
+        height:76px;
+        background-color: rgb(206, 17, 80);
+        letter-spacing: 2px;
+        font-size: 24px; 
+        
+        align-content: Left;
+        fill: black
+        
+       
+      }
+      .dress{
+        
+        width: 330px;
+        height: 53px;
+        background-color: rgb(235, 128, 163);
+        letter-spacing: 0.5px;
+        font-size: 24px; 
+        margin-top: 6px;
+        text-align:left;
+
+        
+        font-family: Courier New, Courier, monospace;
+        
+        
+      }
+      
+     
+      
+      </style>
+  </ion-navbar>
+
+</ion-header>
+<ion-footer>
+  <ion-navbar>
+    <div id="navbar">
+    <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-cart.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-wishlist.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><img src="assets/imgs/nav-profile.png" class="nav" width="30px"></button>
+    </div>
+  </ion-navbar>
+</ion-footer>
+
+<ion-content padding>
+  <!-- <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar> -->
+
+        <button id="womenClothing">< &nbsp;  WOMEN'S CLOTHING</button><br>
+        <div>
+        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/dress.png">&nbsp;Dresses</button><br>
+        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/tops.png" >&nbsp;Tops</button><br>
+        <button ion-button (click) = "nextPage();" class="dress"><img  class="icon" src="assets/imgs/skirts1.png">&nbsp;Skirts  </button><br>
+        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/pants.png">&nbsp;Pants & Leggings</button><br>
+        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/shorts1.png">&nbsp;Shorts</button><br>
+        <button ion-button (click) = "nextPage();" class="dress"><img class="icon" src="assets/imgs/jeans.png">&nbsp;Jeans</button><br>
+      </div>
+</ion-content>

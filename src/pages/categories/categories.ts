@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CategoriesPage }from '../categories/categories';
+import { DressPage } from '../dress/dress';
+
 /**
- * Generated class for the WomenPage page.
+ * Generated class for the CategoriesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,18 +11,19 @@ import { CategoriesPage }from '../categories/categories';
 
 @IonicPage()
 @Component({
-  selector: 'page-women',
-  templateUrl: 'women.html',
+  selector: 'page-categories',
+  templateUrl: 'categories.html',
 })
-export class WomenPage {
+export class CategoriesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
-nextPage(){
-  this.navCtrl.push(CategoriesPage);
-}
+  nextPage(){
+    this.navCtrl.push(DressPage);
+  }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WomenPage');
+    console.log('ionViewDidLoad CategoriesPage');
   }
 
 }

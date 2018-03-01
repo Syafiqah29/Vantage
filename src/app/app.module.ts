@@ -11,13 +11,18 @@ import { HomePage } from '../pages/home/home';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { WomenPage } from '../pages/women/women';
 import { MenPage } from '../pages/men/men';
+import { CategoriesPage } from '../pages/categories/categories';
+import { DressPage } from '../pages/dress/dress';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     WomenPage,
-    MenPage
+    MenPage,
+    CategoriesPage,
+    DressPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,9 @@ import { MenPage } from '../pages/men/men';
     MyApp,
     HomePage,
     WomenPage,
-    MenPage
+    MenPage,
+    CategoriesPage,
+    DressPage
   ],
   providers: [
     StatusBar,
