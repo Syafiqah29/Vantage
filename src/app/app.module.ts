@@ -7,11 +7,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 
-
-
-
-
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FIREBASE_CONFIG } from './firebase.credentials';
@@ -21,9 +16,8 @@ import { CategoriesPage } from '../pages/categories/categories';
 import { DressPage } from '../pages/dress/dress';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
-import { ProfilePage } from '../pages/profile/profile';
 import { ShowprofilePage } from '../pages/showprofile/showprofile';
-
+import { ProfilePage } from '../pages/profile/profile';
 
 var config = {
   apiKey: "AIzaSyBs_7vackdKKp3sP8dcoqMG7YPIuwfuEzc",
@@ -44,19 +38,18 @@ var config = {
     DressPage,
     LoginPage,
     SignupPage,
-    ProfilePage,
-    ShowprofilePage
+    ShowprofilePage,
+    ProfilePage
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireModule.initializeApp(config),
-    AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
-
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -67,8 +60,8 @@ var config = {
     DressPage,
     LoginPage,
     SignupPage,
-    ProfilePage,
-    ShowprofilePage
+    ShowprofilePage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
