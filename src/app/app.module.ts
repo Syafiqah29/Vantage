@@ -4,8 +4,13 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule} from 'angularfire2/auth';
+
+
+
+
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +21,9 @@ import { CategoriesPage } from '../pages/categories/categories';
 import { DressPage } from '../pages/dress/dress';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { ProfilePage } from '../pages/profile/profile';
+import { ShowprofilePage } from '../pages/showprofile/showprofile';
+
 
 var config = {
   apiKey: "AIzaSyBs_7vackdKKp3sP8dcoqMG7YPIuwfuEzc",
@@ -35,17 +43,20 @@ var config = {
     CategoriesPage,
     DressPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ProfilePage,
+    ShowprofilePage
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -55,7 +66,9 @@ var config = {
     CategoriesPage,
     DressPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ProfilePage,
+    ShowprofilePage
   ],
   providers: [
     StatusBar,

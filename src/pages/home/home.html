@@ -2,12 +2,13 @@
   <ion-navbar color="custom"> 
     <ion-title>
       Vantage
+      <div class>Hello {{(profileData | async)?.username}}</div>
     </ion-title>
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="signOut()">
         <ion-icon name="power"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
     <style type="text/css">
     ion-content{
       background-color: #ffb6c1;
@@ -97,7 +98,7 @@
     <button><img src="assets/imgs/nav-bag.png" class="nav" width="30px;"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button><img src="assets/imgs/order.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button><img src="assets/imgs/nav-wishlist.png" class="nav" width="30px"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button><img src="assets/imgs/nav-profile.png" class="nav" width="30px"></button>
+    <button (click) = "profileShow()"><img src="assets/imgs/nav-profile.png" class="nav" width="30px"></button>
   </ion-navbar>
 </ion-footer>
 
@@ -151,4 +152,6 @@
   </ion-slide>
   </ion-slides>
   <br>
+  
+ 
 </ion-content>

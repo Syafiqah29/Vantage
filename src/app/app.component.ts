@@ -12,15 +12,15 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, private afAuth: AngularFireAuth, private statusBar: StatusBar, private splashscreen: SplashScreen) {
-    this.afAuth.authState.subscribe(auth => {
-      if(!auth)
-        this.rootPage = LoginPage;
-      else
-        this.rootPage = HomePage;
-    });
+    // this.afAuth.authState.subscribe(auth => {
+    //   if(!auth)
+    //     this.rootPage = H;
+    //   else
+    //     this.rootPage = HomePage;
+    // });
    
     platform.ready().then(() => {
       statusBar.styleDefault();
