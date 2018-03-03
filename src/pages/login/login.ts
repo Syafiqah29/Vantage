@@ -22,7 +22,7 @@ user = {} as User;
     try{
      const result = await this.afAuth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
      if (result){
-     this.navCtrl.setRoot(HomePage);
+     this.navCtrl.setRoot(ProfilePage);
      }
     }
     catch(e){
