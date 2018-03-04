@@ -5,9 +5,24 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
+  <style>
+    ion-content{
+      background-color: #ffb6c1;
+    }
+    ion-header{
+      background-color: rgb(32, 31, 31)
+    }
+    #logo{
+      height: 50px;
+      text-align: center;
+    }
+    ion-title{
+      text-align: center;
+      font-family: Courier New, Courier, monospace;
+    }
+  </style>
   <ion-navbar>
-    <ion-title>showprofile</ion-title>
+    <ion-title><img src="assets/imgs/logo-2.png" id="logo"></ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click) = "closeModal()"><ion-icon name = "close"></ion-icon></button>
     </ion-buttons>
@@ -17,7 +32,9 @@
 
 
 <ion-content padding>
-  <p>Username: {{(profileData | async)?.username}}</p>
-  <p>First name: {{(profileData | async)?.firstName}}</p>
-  <p>Last name: {{(profileData | async)?.lastName}}</p>
+  <ion-list>
+    <ion-item>Username: {{(profileData | async)?.username}}</ion-item>
+    <ion-item>First name: {{(profileData | async)?.firstName}}</ion-item>
+      <ion-item>Last name: {{(profileData | async)?.lastName}}</ion-item>
+  </ion-list>
 </ion-content>

@@ -21,7 +21,7 @@ export class ProfilePage {
 
   profile = {} as Profile;
 
-  constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
